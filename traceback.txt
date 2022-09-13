@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 363, in script
+    menu my_menu:
+  File "game/script.rpy", line 366, in <module>
+    "Попрошу у капитана выделить еще один стол" if not askCapt:
+NameError: name 'askCapt' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 363, in script
+    menu my_menu:
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 1883, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\exports.py", line 976, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1080, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1073, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 366, in <module>
+    "Попрошу у капитана выделить еще один стол" if not askCapt:
+NameError: name 'askCapt' is not defined
+
+Windows-10-10.0.19043 AMD64
+Ren'Py 8.0.0.22062402
+testGame 1.0
+Wed Sep 14 05:52:22 2022
