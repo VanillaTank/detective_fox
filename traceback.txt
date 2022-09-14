@@ -1,30 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 363, in script
-    menu my_menu:
-  File "game/script.rpy", line 366, in <module>
-    "Попрошу у капитана выделить еще один стол" if not askCapt:
-NameError: name 'askCapt' is not defined
+  File "renpy/common/00keymap.rpy", line 473, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 473, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 492, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 363, in script
-    menu my_menu:
-  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 1883, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\exports.py", line 976, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1080, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1073, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 366, in <module>
-    "Попрошу у капитана выделить еще один стол" if not askCapt:
-NameError: name 'askCapt' is not defined
+  File "renpy/common/00keymap.rpy", line 473, in script
+    python hide:
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\ast.py", line 1111, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\python.py", line 1049, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 473, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 492, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\loadsave.py", line 382, in save
+    roots = renpy.game.log.freeze(None)
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\rollback.py", line 1017, in freeze
+    self.complete(False)
+  File "C:\Users\Tanya\Desktop\Downloads\renpy-8.0.0-sdk\renpy\rollback.py", line 584, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = delta
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 Windows-10-10.0.19043 AMD64
 Ren'Py 8.0.0.22062402
 testGame 1.0
-Wed Sep 14 05:52:22 2022
+Thu Sep 15 05:17:01 2022

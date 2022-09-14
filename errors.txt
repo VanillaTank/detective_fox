@@ -2,9 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 259: expected statement.
-    just whoDigInTable      
-                            ^
+File "game/script.rpy", line 365: Menu does not contain any choices.
+    menu my_menu: 
+                  ^
+
+File "game/script.rpy", line 368: expected statement.
+    "Попрошу у капитана выделить еще один стол" if not askCapt:
+                                                ^
+
+File "game/script.rpy", line 373: expected statement.
+    "Меня это не касается, пусть сидят вчетвером за одним столом или на полу":
+                                                                             ^
+
+File "game/script.rpy", line 382: expected statement.
+    "Пусть приходят через день по двое. Вдвоем же уместятся?":
+                                                             ^
+
+File "game/script.rpy", line 387: expected statement.
+    "Ладно. Пусть сидят за столом Рози. Но ничего на нем не трогают." if character != "pessimistic" and character != "nigilistic" and not tableKiller:
+                                                                      ^
 
 Ren'Py Version: Ren'Py 8.0.0.22062402
-Wed Sep 14 05:33:39 2022
+Thu Sep 15 05:38:05 2022

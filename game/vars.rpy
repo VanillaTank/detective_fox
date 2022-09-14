@@ -17,6 +17,7 @@ init:
     define broudi = Character('Лейтенант Броуди', color="#c8ffc8")
     
     # Capitan Clara Bounce
+    define clara = Character("Капитан Клара Боунс")
     define rel_clara = 10
 
     # Mika
